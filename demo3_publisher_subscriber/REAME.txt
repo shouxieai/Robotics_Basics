@@ -1,0 +1,5 @@
+in one terminal, rosrun pub_sub pub
+                        [pkg name] [source file name]
+
+in another terminal, to check whether the publisher is running well.
+    - rostop echo house     "house" is the topic name
