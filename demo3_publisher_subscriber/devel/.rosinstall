@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /datav/projects/ROS/demo3_publisher_subscriber/devel/setup.sh

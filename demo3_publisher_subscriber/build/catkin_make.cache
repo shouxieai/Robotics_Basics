@@ -1,0 +1,2 @@
+pub_sub
+-DCATKIN_DEVEL_PREFIX=/datav/projects/ROS/demo3_publisher_subscriber/devel -DCMAKE_INSTALL_PREFIX=/datav/projects/ROS/demo3_publisher_subscriber/install -G Unix Makefiles
