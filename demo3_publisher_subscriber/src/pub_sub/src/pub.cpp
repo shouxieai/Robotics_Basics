@@ -18,7 +18,7 @@
 
 int main(int argc, char* argv[]){
     // 2. init a ROS node
-    ros::init(argc, argv,"node_Romeo");
+    ros::init(argc, argv,"node_Apollo");
     // 3. create a node handle (a ptr pointing to the current node)
     ros::NodeHandle nh;
     // 4. create publisher instance on the node
