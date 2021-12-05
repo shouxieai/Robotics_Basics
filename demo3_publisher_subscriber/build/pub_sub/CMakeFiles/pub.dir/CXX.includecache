@@ -11,6 +11,8 @@ ros/ros.h
 /datav/projects/ROS/demo3_publisher_subscriber/src/pub_sub/src/ros/ros.h
 std_msgs/String.h
 /datav/projects/ROS/demo3_publisher_subscriber/src/pub_sub/src/std_msgs/String.h
+sstream
+-
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h

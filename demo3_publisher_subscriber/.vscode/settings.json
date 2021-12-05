@@ -8,6 +8,13 @@
     "files.associations": {
         "array": "cpp",
         "string": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "sstream": "cpp",
+        "iosfwd": "cpp",
+        "bitset": "cpp",
+        "chrono": "cpp",
+        "algorithm": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp"
     }
 }

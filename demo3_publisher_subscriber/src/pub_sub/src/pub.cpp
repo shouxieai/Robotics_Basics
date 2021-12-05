@@ -1,6 +1,7 @@
 // 1. include headers
 #include "ros/ros.h"
-#include "std_msgs/String.h"
+#include "std_msgs/String.h" // std_msgs::String msg;
+#include <sstream>      // std::stringstream
 
 /* 
         消息发布方:
@@ -26,12 +27,30 @@ int main(int argc, char* argv[]){
         10 here: the size of the outgoing message queue. If you are publishing the messages faster than the roscpp can send
         over the wire. The roscpp will drop the old messages and only take the newer ones.
      */
-    std_msgs::String msg;
+    std_msgs::String msg; // data carrier 
+    ros::Rate rate(10);  // 10 Hz
+    int count = 0;
 
     // 5. for loop to publish data
     while (ros::ok()){
-        msg.data = "hello~~";
+        // init
+        count ++;
+        std::stringstream ss;
+
+        // manipulate and publish
+        ss << "hello ---> " << count; // concat the string
+        msg.data = ss.str();
         pub.publish(msg);
+
+        // log
+        ROS_INFO("publish data: %s", ss.str().c_str()); //@notice this way: c_str()
+
+        // before next run
+        rate.sleep(); // sleep until we achieve the 10 Hz.
     }
     return 0;
 }
+
+/*
+remember to build it before run it after modify it
+ */
