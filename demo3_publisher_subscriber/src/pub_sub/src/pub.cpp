@@ -1,5 +1,7 @@
+// 1. include headers
 #include "ros/ros.h"
 #include "std_msgs/String.h"
+
 /* 
         消息发布方:
         循环发布信息:HelloWorld 后缀数字编号
@@ -15,11 +17,15 @@
 
 int main(int argc, char* argv[]){
     // 2. init a ROS node
-    ros::init(argc, argv, "node_A");
+    ros::init(argc, argv,"node_A");
     // 3. create a node handle (a ptr pointing to the current node)
     ros::NodeHandle nh;
     // 4. create publisher instance on the node
     ros::Publisher pub = nh.advertise<std_msgs::String>("house", 10);
+    /* 
+        10 here: the size of the outgoing message queue. If you are publishing the messages faster than the roscpp can send
+        over the wire. The roscpp will drop the old messages and only take the newer ones.
+     */
     std_msgs::String msg;
 
     // 5. for loop to publish data
@@ -29,6 +35,3 @@ int main(int argc, char* argv[]){
     }
     return 0;
 }
-
-/* 
- */
