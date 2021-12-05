@@ -13,4 +13,5 @@ export LD_LIBRARY_PATH="/datav/projects/ROS/demo3_publisher_subscriber/devel/lib
 export PATH='/opt/ros/noetic/bin:/root/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/bin:/datav/software/anaconda3/bin:/datav/software/anaconda3/condabin:/root/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
 export PKG_CONFIG_PATH="/datav/projects/ROS/demo3_publisher_subscriber/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/datav/projects/ROS/demo3_publisher_subscriber/build'
+export PYTHONPATH="/datav/projects/ROS/demo3_publisher_subscriber/devel/lib/python3/dist-packages:$PYTHONPATH"
 export ROS_PACKAGE_PATH="/datav/projects/ROS/demo3_publisher_subscriber/src:$ROS_PACKAGE_PATH"

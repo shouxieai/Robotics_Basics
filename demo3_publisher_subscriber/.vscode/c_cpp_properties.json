@@ -8,7 +8,8 @@
             "includePath": [
                 "/opt/ros/noetic/include/**",
                 "/usr/include/**",
-                "${workspaceFolder}/devel/include/**" //配置 head 文件的路径 
+                "${workspaceFolder}/devel/include/**", //配置 head 文件的路径
+                // "/datav/projects/ROS/demo3_publisher_subscriber/devel/include/**"
             ],
             "name": "ROS",
             "intelliSenseMode": "gcc-x64",
