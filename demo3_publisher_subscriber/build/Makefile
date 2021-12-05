@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named sub
+
+# Build rule for target.
+sub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sub
+.PHONY : sub
+
+# fast build rule for target.
+sub/fast:
+	$(MAKE) -f pub_sub/CMakeFiles/sub.dir/build.make pub_sub/CMakeFiles/sub.dir/build
+.PHONY : sub/fast
+
+#=============================================================================
 # Target rules for targets named pub
 
 # Build rule for target.
@@ -514,6 +527,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... sub"
 	@echo "... pub"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_nodejs"

@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+pub_sub/CMakeFiles/sub.dir/rule:
+	cd /datav/projects/ROS/demo3_publisher_subscriber/build && $(MAKE) -f CMakeFiles/Makefile2 pub_sub/CMakeFiles/sub.dir/rule
+.PHONY : pub_sub/CMakeFiles/sub.dir/rule
+
+# Convenience name for target.
+sub: pub_sub/CMakeFiles/sub.dir/rule
+
+.PHONY : sub
+
+# fast build rule for target.
+sub/fast:
+	cd /datav/projects/ROS/demo3_publisher_subscriber/build && $(MAKE) -f pub_sub/CMakeFiles/sub.dir/build.make pub_sub/CMakeFiles/sub.dir/build
+.PHONY : sub/fast
+
+# Convenience name for target.
 pub_sub/CMakeFiles/pub.dir/rule:
 	cd /datav/projects/ROS/demo3_publisher_subscriber/build && $(MAKE) -f CMakeFiles/Makefile2 pub_sub/CMakeFiles/pub.dir/rule
 .PHONY : pub_sub/CMakeFiles/pub.dir/rule
@@ -434,6 +449,33 @@ src/pub.cpp.s:
 	cd /datav/projects/ROS/demo3_publisher_subscriber/build && $(MAKE) -f pub_sub/CMakeFiles/pub.dir/build.make pub_sub/CMakeFiles/pub.dir/src/pub.cpp.s
 .PHONY : src/pub.cpp.s
 
+src/sub.o: src/sub.cpp.o
+
+.PHONY : src/sub.o
+
+# target to build an object file
+src/sub.cpp.o:
+	cd /datav/projects/ROS/demo3_publisher_subscriber/build && $(MAKE) -f pub_sub/CMakeFiles/sub.dir/build.make pub_sub/CMakeFiles/sub.dir/src/sub.cpp.o
+.PHONY : src/sub.cpp.o
+
+src/sub.i: src/sub.cpp.i
+
+.PHONY : src/sub.i
+
+# target to preprocess a source file
+src/sub.cpp.i:
+	cd /datav/projects/ROS/demo3_publisher_subscriber/build && $(MAKE) -f pub_sub/CMakeFiles/sub.dir/build.make pub_sub/CMakeFiles/sub.dir/src/sub.cpp.i
+.PHONY : src/sub.cpp.i
+
+src/sub.s: src/sub.cpp.s
+
+.PHONY : src/sub.s
+
+# target to generate assembly for a file
+src/sub.cpp.s:
+	cd /datav/projects/ROS/demo3_publisher_subscriber/build && $(MAKE) -f pub_sub/CMakeFiles/sub.dir/build.make pub_sub/CMakeFiles/sub.dir/src/sub.cpp.s
+.PHONY : src/sub.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -443,6 +485,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... sub"
 	@echo "... install/local"
 	@echo "... pub"
 	@echo "... std_msgs_generate_messages_py"
@@ -466,6 +509,9 @@ help:
 	@echo "... src/pub.o"
 	@echo "... src/pub.i"
 	@echo "... src/pub.s"
+	@echo "... src/sub.o"
+	@echo "... src/sub.i"
+	@echo "... src/sub.s"
 .PHONY : help
 
 

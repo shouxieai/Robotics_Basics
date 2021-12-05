@@ -18,18 +18,26 @@
 
 int main(int argc, char* argv[]){
     // 2. init a ROS node
-    ros::init(argc, argv,"node_A");
+    ros::init(argc, argv,"node_Romeo");
     // 3. create a node handle (a ptr pointing to the current node)
     ros::NodeHandle nh;
     // 4. create publisher instance on the node
-    ros::Publisher pub = nh.advertise<std_msgs::String>("house", 10);
+    ros::Publisher pub = nh.advertise<std_msgs::String>("house", 10); // only receive the latest 10 messasges from publisher.
     /* 
         10 here: the size of the outgoing message queue. If you are publishing the messages faster than the roscpp can send
         over the wire. The roscpp will drop the old messages and only take the newer ones.
      */
     std_msgs::String msg; // data carrier 
-    ros::Rate rate(10);  // 10 Hz
+    ros::Rate rate(10);  // 10 Hz  (e.g. 0.5 hz ---> 0.5s/cycle)
+    /* 
+            Hertz	Per	Cycle       Per Second
+            1 hz	1 second	    1 cycle/sec
+            2 hz	0.5 seconds	    2 cycles/sec
+            3 hz	0.3333 seconds	3 cycles/sec
+    
+     */
     int count = 0;
+    ros::Duration(2.0).sleep();
 
     // 5. for loop to publish data
     while (ros::ok()){
@@ -47,6 +55,7 @@ int main(int argc, char* argv[]){
 
         // before next run
         rate.sleep(); // sleep until we achieve the 10 Hz.
+        ros::spinOnce(); // officially rocommend
     }
     return 0;
 }

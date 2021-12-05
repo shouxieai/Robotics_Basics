@@ -38,6 +38,7 @@
 /datav/projects/ROS/demo3_publisher_subscriber/build/pub_sub/CMakeFiles/rebuild_cache.dir
 /datav/projects/ROS/demo3_publisher_subscriber/build/pub_sub/CMakeFiles/edit_cache.dir
 /datav/projects/ROS/demo3_publisher_subscriber/build/pub_sub/CMakeFiles/test.dir
+/datav/projects/ROS/demo3_publisher_subscriber/build/pub_sub/CMakeFiles/sub.dir
 /datav/projects/ROS/demo3_publisher_subscriber/build/pub_sub/CMakeFiles/install/local.dir
 /datav/projects/ROS/demo3_publisher_subscriber/build/pub_sub/CMakeFiles/pub.dir
 /datav/projects/ROS/demo3_publisher_subscriber/build/pub_sub/CMakeFiles/std_msgs_generate_messages_py.dir
