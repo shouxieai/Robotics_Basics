@@ -1,2 +1,0 @@
-param_server:pub_sub:srv_cli
--DCATKIN_DEVEL_PREFIX=/datav/projects/ROS/demo3_communication/devel -DCMAKE_INSTALL_PREFIX=/datav/projects/ROS/demo3_communication/install -G Unix Makefiles
