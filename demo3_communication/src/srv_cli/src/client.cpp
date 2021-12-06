@@ -15,7 +15,13 @@
         1. 格式: rosrun xxxx xxxx 12 32
         2. 节点执行的时候，需要获取命令中的参数，并组织进request中
 
+    需求： 
+        如果先启动客户端，不想直接抛出异常，而是挂起，等待服务器启动，再正常请求。
+    解决：
+        在ROS中内置了相关函数，这些函数可以让客户端启动后挂起，等待服务器启动
+
 */
+
 
 // 1.包含头文件
 #include "ros/ros.h"
@@ -41,6 +47,11 @@ int main(int argc, char* argv[]){
     ai.request.num1 = atoi(argv[1]);
     ai.request.num2 = atoi(argv[2]);
     // 5.2 处理响应
+    // 调用判断服务器状态的函数
+    // client.waitForExistence();// (1)
+    ros::service::waitForService("operations"); //(2) operations指的是topic名称
+
+
     bool flag = client.call(ai);
     if (flag)
     {
