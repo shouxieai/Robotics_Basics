@@ -415,19 +415,6 @@ rosgraph_msgs_generate_messages_cpp/fast:
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named hello
-
-# Build rule for target.
-hello: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 hello
-.PHONY : hello
-
-# fast build rule for target.
-hello/fast:
-	$(MAKE) -f custom_head/CMakeFiles/hello.dir/build.make custom_head/CMakeFiles/hello.dir/build
-.PHONY : hello/fast
-
-#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -491,6 +478,32 @@ rosgraph_msgs_generate_messages_py: cmake_check_build_system
 rosgraph_msgs_generate_messages_py/fast:
 	$(MAKE) -f custom_head/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make custom_head/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named use_hello
+
+# Build rule for target.
+use_hello: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 use_hello
+.PHONY : use_hello
+
+# fast build rule for target.
+use_hello/fast:
+	$(MAKE) -f custom_src/CMakeFiles/use_hello.dir/build.make custom_src/CMakeFiles/use_hello.dir/build
+.PHONY : use_hello/fast
+
+#=============================================================================
+# Target rules for targets named head_src
+
+# Build rule for target.
+head_src: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 head_src
+.PHONY : head_src
+
+# fast build rule for target.
+head_src/fast:
+	$(MAKE) -f custom_src/CMakeFiles/head_src.dir/build.make custom_src/CMakeFiles/head_src.dir/build
+.PHONY : head_src/fast
 
 #=============================================================================
 # Target rules for targets named param_srv_del
@@ -966,12 +979,13 @@ help:
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... hello"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... use_hello"
+	@echo "... head_src"
 	@echo "... param_srv_del"
 	@echo "... param_srv_get"
 	@echo "... param_srv_set"

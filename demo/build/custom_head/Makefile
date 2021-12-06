@@ -318,21 +318,6 @@ rosgraph_msgs_generate_messages_cpp/fast:
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-custom_head/CMakeFiles/hello.dir/rule:
-	cd /datav/projects/ROS/demo/build && $(MAKE) -f CMakeFiles/Makefile2 custom_head/CMakeFiles/hello.dir/rule
-.PHONY : custom_head/CMakeFiles/hello.dir/rule
-
-# Convenience name for target.
-hello: custom_head/CMakeFiles/hello.dir/rule
-
-.PHONY : hello
-
-# fast build rule for target.
-hello/fast:
-	cd /datav/projects/ROS/demo/build && $(MAKE) -f custom_head/CMakeFiles/hello.dir/build.make custom_head/CMakeFiles/hello.dir/build
-.PHONY : hello/fast
-
-# Convenience name for target.
 custom_head/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
 	cd /datav/projects/ROS/demo/build && $(MAKE) -f CMakeFiles/Makefile2 custom_head/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 .PHONY : custom_head/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
@@ -407,33 +392,6 @@ rosgraph_msgs_generate_messages_py/fast:
 	cd /datav/projects/ROS/demo/build && $(MAKE) -f custom_head/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make custom_head/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
-src/hello.o: src/hello.cpp.o
-
-.PHONY : src/hello.o
-
-# target to build an object file
-src/hello.cpp.o:
-	cd /datav/projects/ROS/demo/build && $(MAKE) -f custom_head/CMakeFiles/hello.dir/build.make custom_head/CMakeFiles/hello.dir/src/hello.cpp.o
-.PHONY : src/hello.cpp.o
-
-src/hello.i: src/hello.cpp.i
-
-.PHONY : src/hello.i
-
-# target to preprocess a source file
-src/hello.cpp.i:
-	cd /datav/projects/ROS/demo/build && $(MAKE) -f custom_head/CMakeFiles/hello.dir/build.make custom_head/CMakeFiles/hello.dir/src/hello.cpp.i
-.PHONY : src/hello.cpp.i
-
-src/hello.s: src/hello.cpp.s
-
-.PHONY : src/hello.s
-
-# target to generate assembly for a file
-src/hello.cpp.s:
-	cd /datav/projects/ROS/demo/build && $(MAKE) -f custom_head/CMakeFiles/hello.dir/build.make custom_head/CMakeFiles/hello.dir/src/hello.cpp.s
-.PHONY : src/hello.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -457,15 +415,11 @@ help:
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... install/strip"
-	@echo "... hello"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... src/hello.o"
-	@echo "... src/hello.i"
-	@echo "... src/hello.s"
 .PHONY : help
 
 

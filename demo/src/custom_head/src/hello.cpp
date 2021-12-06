@@ -25,10 +25,16 @@ int main(int argc, char* argv[]){
 /* 
 去 CMakeList.txt 除了常规 add_execute   target_link
 还有 include_directories()
+and 
+   xxxx same as
+add_dependencies(hello ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 e.g. 
 include_directories(
 include  <=====将这个uncomment 掉
   ${catkin_INCLUDE_DIRS}
 )
+
+
+
  */
