@@ -54,6 +54,7 @@ int main(int argc, char* argv[]){
 }
 
 /* 
+检验
 rosrun srv_cli server
 
 rosservice call operations tab auto-complete

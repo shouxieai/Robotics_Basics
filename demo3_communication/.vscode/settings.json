@@ -17,6 +17,7 @@
         "hash_map": "cpp",
         "hash_set": "cpp",
         "istream": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "random": "cpp"
     }
 }
