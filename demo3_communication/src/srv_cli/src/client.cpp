@@ -11,6 +11,10 @@
         4.创建 客户端 对象
         5.请求服务，接收响应
 
+    实现参数的动态提交：
+        1. 格式: rosrun xxxx xxxx 12 32
+        2. 节点执行的时候，需要获取命令中的参数，并组织进request中
+
 */
 
 // 1.包含头文件
@@ -19,6 +23,12 @@
 #include "iostream"
 
 int main(int argc, char* argv[]){
+    // 优化实现，获取命令中的参数
+    if(argc !=3){
+        ROS_INFO("the number of argument is not correct!");
+        return 1;
+    }
+
     // 2.初始化 ROS 节点
     ros::init(argc,argv,"NASA_Add_Client");
     // 3.创建 ROS 句柄
@@ -28,8 +38,8 @@ int main(int argc, char* argv[]){
     // 5.提交请求并处理响应
     srv_cli::AddInts ai; // 请求/响应加法的服务的载体  类比于信息的载体 (e.g.简单信息std_msgs::String msg; 复杂信息pub_sub::Spacecraft sp;)
     // 5.1 组织请求
-    ai.request.num1 = 400;
-    ai.request.num2 = 200;
+    ai.request.num1 = atoi(argv[1]);
+    ai.request.num2 = atoi(argv[2]);
     // 5.2 处理响应
     bool flag = client.call(ai);
     if (flag)
