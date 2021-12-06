@@ -1,0 +1,22 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "files.associations": {
+        "array": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "sstream": "cpp",
+        "iosfwd": "cpp",
+        "bitset": "cpp",
+        "chrono": "cpp",
+        "algorithm": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp",
+        "istream": "cpp",
+        "iostream": "cpp"
+    }
+}

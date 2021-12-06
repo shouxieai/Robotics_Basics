@@ -1,8 +1,0 @@
-prefix=/datav/projects/ROS/demo3_publisher_subscriber/install
-
-Name: pub_sub
-Description: Description of pub_sub
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: roscpp rospy std_msgs message_runtime

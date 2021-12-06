@@ -1,0 +1,8 @@
+# client sending some data
+bool get_linear_velocity
+bool get_radius
+
+---
+# server sending the result back
+float32 angular_velocity_value
+

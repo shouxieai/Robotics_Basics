@@ -1,3 +1,15 @@
+*.log
+*.make
+*.internal
+*.cmake
+*.pc
+*.in
+*.stamp
+*.lisp
+*.asd
+*.js
+*.l
+
 # Prerequisites
 *.d
 

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /datav/projects/ROS/demo3_communication/devel/setup.sh
