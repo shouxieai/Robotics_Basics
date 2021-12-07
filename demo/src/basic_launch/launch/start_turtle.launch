@@ -1,0 +1,36 @@
+<launch>
+    <!-- 启动的节点 -->
+    <!-- respawn="true" 节点关闭后自动重启 -->
+    <!-- required="true" 节点推出后，关闭整个系统 -->
+    <!-- ns="hello" 设置节点的命名空间-->
+    <node pkg="turtlesim" type="turtlesim_node" name="my_turtle" output="screen">
+        <remap from="/turtle1/cmd_vel" to="/cmd_vel" />
+    </node>
+    <!-- keyborad control node-->
+    <node pkg="turtlesim" type="turtlesim_teleop" name="my_key" output="screen" />
+</launch>
+<!--Notes: here we start the teleop special for turtle
+. But sometimes we don't want it. Instead we use the build-in
+and more general teleop to control the robot
+
+use rostopic list
+we see that
+start_turtial.launch is on the topic /turtlel/cmd_vel
+
+/cmd_vel
+/rosout
+/rosout_agg
+/turtle1/cmd_vel
+/turtle1/color_sensor
+/turtle1/pose
+
+However 
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py [the built-in general teleop]
+
+Waiting for subscriber to connect to /cmd_vel
+it's cmd_vel.
+
+therefore, we need to remap the turtle/cmd_vel to cmd_vel
+
+-->
+
