@@ -3,14 +3,40 @@
     <!-- respawn="true" 节点关闭后自动重启 -->
     <!-- required="true" 节点推出后，关闭整个系统 -->
     <!-- ns="hello" 设置节点的命名空间-->
+    <!--param使用： 向参数服务器设置参数-->
+    <!--格式1：launch 下 node外 有不同-->
+    <param name="param_A" type="int" value="100" />
     <node pkg="turtlesim" type="turtlesim_node" name="my_turtle" output="screen">
         <remap from="/turtle1/cmd_vel" to="/cmd_vel" />
+        <!--格式2: node下-->
+        <param name="param_B" type="double" value="3.14" />
     </node>
     <!-- keyborad control node-->
     <node pkg="turtlesim" type="turtlesim_teleop" name="my_key" output="screen" />
 </launch>
-<!--Notes: here we start the teleop special for turtle
-. But sometimes we don't want it. Instead we use the build-in
+
+<!-- 
+ Notes:[about using param]
+    after roslaunch the launch file, type in rosparam list
+    
+    /my_turtle/background_b
+    /my_turtle/background_g
+    /my_turtle/background_r
+    /my_turtle/param_B <=======
+    /param_A <======
+    /rosdistro
+    /roslaunch/uris/host_59b33b7f8ba7__39199
+    /rosversion
+    /run_id
+
+    
+
+ -->
+
+
+
+<!--Notes:[about using built-in teleop] here we start the teleop special for turtle
+. But sometimes we don't want it. Instead we use the built-in
 and more general teleop to control the robot
 
 use rostopic list
