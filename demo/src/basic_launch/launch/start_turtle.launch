@@ -6,10 +6,17 @@
     <!--param使用： 向参数服务器设置参数-->
     <!--格式1：launch 下 node外 有不同-->
     <param name="param_A" type="int" value="100" />
+
+    <!-- rosparm 的使用: 格式1 launch下 操作参数服务器数据-->
+    <rosparam command="load" file="$(find basic_launch)/launch/params.yaml" />
+
     <node pkg="turtlesim" type="turtlesim_node" name="my_turtle" output="screen">
         <remap from="/turtle1/cmd_vel" to="/cmd_vel" />
         <!--格式2: node下-->
         <param name="param_B" type="double" value="3.14" />
+        <!--rosparm 的使用: 格式2 node下-->
+        <rosparam command="load" file="$(find basic_launch)/launch/params.yaml" />
+
     </node>
     <!-- keyborad control node-->
     <node pkg="turtlesim" type="turtlesim_teleop" name="my_key" output="screen" />
