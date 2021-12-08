@@ -518,6 +518,12 @@ tf03_multi_BINARY_DIR:STATIC=/datav/projects/ROS/common_component_demo/build/tf0
 //Value Computed by CMake
 tf03_multi_SOURCE_DIR:STATIC=/datav/projects/ROS/common_component_demo/src/tf03_multi
 
+//Value Computed by CMake
+tf04_turtle_tracking_BINARY_DIR:STATIC=/datav/projects/ROS/common_component_demo/build/tf04_turtle_tracking
+
+//Value Computed by CMake
+tf04_turtle_tracking_SOURCE_DIR:STATIC=/datav/projects/ROS/common_component_demo/src/tf04_turtle_tracking
+
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/noetic/share/tf2/cmake
 
@@ -687,7 +693,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

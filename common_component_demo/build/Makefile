@@ -921,6 +921,19 @@ dyn_pub/fast:
 	$(MAKE) -f tf02_dynamic/CMakeFiles/dyn_pub.dir/build.make tf02_dynamic/CMakeFiles/dyn_pub.dir/build
 .PHONY : dyn_pub/fast
 
+#=============================================================================
+# Target rules for targets named draw_another_turtle
+
+# Build rule for target.
+draw_another_turtle: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 draw_another_turtle
+.PHONY : draw_another_turtle
+
+# fast build rule for target.
+draw_another_turtle/fast:
+	$(MAKE) -f tf04_turtle_tracking/CMakeFiles/draw_another_turtle.dir/build.make tf04_turtle_tracking/CMakeFiles/draw_another_turtle.dir/build
+.PHONY : draw_another_turtle/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -992,6 +1005,7 @@ help:
 	@echo "... turtlesim_generate_messages_py"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... dyn_pub"
+	@echo "... draw_another_turtle"
 .PHONY : help
 
 
