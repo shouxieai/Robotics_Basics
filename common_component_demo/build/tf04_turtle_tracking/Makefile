@@ -80,6 +80,28 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -112,28 +134,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,88 +168,130 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-tf04_turtle_tracking/CMakeFiles/pub_turtle_pose.dir/rule:
-	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f CMakeFiles/Makefile2 tf04_turtle_tracking/CMakeFiles/pub_turtle_pose.dir/rule
-.PHONY : tf04_turtle_tracking/CMakeFiles/pub_turtle_pose.dir/rule
+tf04_turtle_tracking/CMakeFiles/3.control_turtle2.dir/rule:
+	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f CMakeFiles/Makefile2 tf04_turtle_tracking/CMakeFiles/3.control_turtle2.dir/rule
+.PHONY : tf04_turtle_tracking/CMakeFiles/3.control_turtle2.dir/rule
 
 # Convenience name for target.
-pub_turtle_pose: tf04_turtle_tracking/CMakeFiles/pub_turtle_pose.dir/rule
+3.control_turtle2: tf04_turtle_tracking/CMakeFiles/3.control_turtle2.dir/rule
 
-.PHONY : pub_turtle_pose
+.PHONY : 3.control_turtle2
 
 # fast build rule for target.
-pub_turtle_pose/fast:
-	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/pub_turtle_pose.dir/build.make tf04_turtle_tracking/CMakeFiles/pub_turtle_pose.dir/build
-.PHONY : pub_turtle_pose/fast
+3.control_turtle2/fast:
+	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/3.control_turtle2.dir/build.make tf04_turtle_tracking/CMakeFiles/3.control_turtle2.dir/build
+.PHONY : 3.control_turtle2/fast
 
 # Convenience name for target.
-tf04_turtle_tracking/CMakeFiles/draw_another_turtle.dir/rule:
-	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f CMakeFiles/Makefile2 tf04_turtle_tracking/CMakeFiles/draw_another_turtle.dir/rule
-.PHONY : tf04_turtle_tracking/CMakeFiles/draw_another_turtle.dir/rule
+tf04_turtle_tracking/CMakeFiles/2.pub_turtle_pose.dir/rule:
+	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f CMakeFiles/Makefile2 tf04_turtle_tracking/CMakeFiles/2.pub_turtle_pose.dir/rule
+.PHONY : tf04_turtle_tracking/CMakeFiles/2.pub_turtle_pose.dir/rule
 
 # Convenience name for target.
-draw_another_turtle: tf04_turtle_tracking/CMakeFiles/draw_another_turtle.dir/rule
+2.pub_turtle_pose: tf04_turtle_tracking/CMakeFiles/2.pub_turtle_pose.dir/rule
 
-.PHONY : draw_another_turtle
+.PHONY : 2.pub_turtle_pose
 
 # fast build rule for target.
-draw_another_turtle/fast:
-	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/draw_another_turtle.dir/build.make tf04_turtle_tracking/CMakeFiles/draw_another_turtle.dir/build
-.PHONY : draw_another_turtle/fast
+2.pub_turtle_pose/fast:
+	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/2.pub_turtle_pose.dir/build.make tf04_turtle_tracking/CMakeFiles/2.pub_turtle_pose.dir/build
+.PHONY : 2.pub_turtle_pose/fast
 
-src/draw_another_turtle.o: src/draw_another_turtle.cpp.o
+# Convenience name for target.
+tf04_turtle_tracking/CMakeFiles/1.draw_another_turtle.dir/rule:
+	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f CMakeFiles/Makefile2 tf04_turtle_tracking/CMakeFiles/1.draw_another_turtle.dir/rule
+.PHONY : tf04_turtle_tracking/CMakeFiles/1.draw_another_turtle.dir/rule
 
-.PHONY : src/draw_another_turtle.o
+# Convenience name for target.
+1.draw_another_turtle: tf04_turtle_tracking/CMakeFiles/1.draw_another_turtle.dir/rule
 
-# target to build an object file
-src/draw_another_turtle.cpp.o:
-	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/draw_another_turtle.dir/build.make tf04_turtle_tracking/CMakeFiles/draw_another_turtle.dir/src/draw_another_turtle.cpp.o
-.PHONY : src/draw_another_turtle.cpp.o
+.PHONY : 1.draw_another_turtle
 
-src/draw_another_turtle.i: src/draw_another_turtle.cpp.i
+# fast build rule for target.
+1.draw_another_turtle/fast:
+	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/1.draw_another_turtle.dir/build.make tf04_turtle_tracking/CMakeFiles/1.draw_another_turtle.dir/build
+.PHONY : 1.draw_another_turtle/fast
 
-.PHONY : src/draw_another_turtle.i
+src/1.draw_another_turtle.o: src/1.draw_another_turtle.cpp.o
 
-# target to preprocess a source file
-src/draw_another_turtle.cpp.i:
-	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/draw_another_turtle.dir/build.make tf04_turtle_tracking/CMakeFiles/draw_another_turtle.dir/src/draw_another_turtle.cpp.i
-.PHONY : src/draw_another_turtle.cpp.i
-
-src/draw_another_turtle.s: src/draw_another_turtle.cpp.s
-
-.PHONY : src/draw_another_turtle.s
-
-# target to generate assembly for a file
-src/draw_another_turtle.cpp.s:
-	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/draw_another_turtle.dir/build.make tf04_turtle_tracking/CMakeFiles/draw_another_turtle.dir/src/draw_another_turtle.cpp.s
-.PHONY : src/draw_another_turtle.cpp.s
-
-src/pub_turtle_pose.o: src/pub_turtle_pose.cpp.o
-
-.PHONY : src/pub_turtle_pose.o
+.PHONY : src/1.draw_another_turtle.o
 
 # target to build an object file
-src/pub_turtle_pose.cpp.o:
-	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/pub_turtle_pose.dir/build.make tf04_turtle_tracking/CMakeFiles/pub_turtle_pose.dir/src/pub_turtle_pose.cpp.o
-.PHONY : src/pub_turtle_pose.cpp.o
+src/1.draw_another_turtle.cpp.o:
+	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/1.draw_another_turtle.dir/build.make tf04_turtle_tracking/CMakeFiles/1.draw_another_turtle.dir/src/1.draw_another_turtle.cpp.o
+.PHONY : src/1.draw_another_turtle.cpp.o
 
-src/pub_turtle_pose.i: src/pub_turtle_pose.cpp.i
+src/1.draw_another_turtle.i: src/1.draw_another_turtle.cpp.i
 
-.PHONY : src/pub_turtle_pose.i
+.PHONY : src/1.draw_another_turtle.i
 
 # target to preprocess a source file
-src/pub_turtle_pose.cpp.i:
-	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/pub_turtle_pose.dir/build.make tf04_turtle_tracking/CMakeFiles/pub_turtle_pose.dir/src/pub_turtle_pose.cpp.i
-.PHONY : src/pub_turtle_pose.cpp.i
+src/1.draw_another_turtle.cpp.i:
+	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/1.draw_another_turtle.dir/build.make tf04_turtle_tracking/CMakeFiles/1.draw_another_turtle.dir/src/1.draw_another_turtle.cpp.i
+.PHONY : src/1.draw_another_turtle.cpp.i
 
-src/pub_turtle_pose.s: src/pub_turtle_pose.cpp.s
+src/1.draw_another_turtle.s: src/1.draw_another_turtle.cpp.s
 
-.PHONY : src/pub_turtle_pose.s
+.PHONY : src/1.draw_another_turtle.s
 
 # target to generate assembly for a file
-src/pub_turtle_pose.cpp.s:
-	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/pub_turtle_pose.dir/build.make tf04_turtle_tracking/CMakeFiles/pub_turtle_pose.dir/src/pub_turtle_pose.cpp.s
-.PHONY : src/pub_turtle_pose.cpp.s
+src/1.draw_another_turtle.cpp.s:
+	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/1.draw_another_turtle.dir/build.make tf04_turtle_tracking/CMakeFiles/1.draw_another_turtle.dir/src/1.draw_another_turtle.cpp.s
+.PHONY : src/1.draw_another_turtle.cpp.s
+
+src/2.pub_turtle_pose.o: src/2.pub_turtle_pose.cpp.o
+
+.PHONY : src/2.pub_turtle_pose.o
+
+# target to build an object file
+src/2.pub_turtle_pose.cpp.o:
+	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/2.pub_turtle_pose.dir/build.make tf04_turtle_tracking/CMakeFiles/2.pub_turtle_pose.dir/src/2.pub_turtle_pose.cpp.o
+.PHONY : src/2.pub_turtle_pose.cpp.o
+
+src/2.pub_turtle_pose.i: src/2.pub_turtle_pose.cpp.i
+
+.PHONY : src/2.pub_turtle_pose.i
+
+# target to preprocess a source file
+src/2.pub_turtle_pose.cpp.i:
+	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/2.pub_turtle_pose.dir/build.make tf04_turtle_tracking/CMakeFiles/2.pub_turtle_pose.dir/src/2.pub_turtle_pose.cpp.i
+.PHONY : src/2.pub_turtle_pose.cpp.i
+
+src/2.pub_turtle_pose.s: src/2.pub_turtle_pose.cpp.s
+
+.PHONY : src/2.pub_turtle_pose.s
+
+# target to generate assembly for a file
+src/2.pub_turtle_pose.cpp.s:
+	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/2.pub_turtle_pose.dir/build.make tf04_turtle_tracking/CMakeFiles/2.pub_turtle_pose.dir/src/2.pub_turtle_pose.cpp.s
+.PHONY : src/2.pub_turtle_pose.cpp.s
+
+src/3.control_turtle2.o: src/3.control_turtle2.cpp.o
+
+.PHONY : src/3.control_turtle2.o
+
+# target to build an object file
+src/3.control_turtle2.cpp.o:
+	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/3.control_turtle2.dir/build.make tf04_turtle_tracking/CMakeFiles/3.control_turtle2.dir/src/3.control_turtle2.cpp.o
+.PHONY : src/3.control_turtle2.cpp.o
+
+src/3.control_turtle2.i: src/3.control_turtle2.cpp.i
+
+.PHONY : src/3.control_turtle2.i
+
+# target to preprocess a source file
+src/3.control_turtle2.cpp.i:
+	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/3.control_turtle2.dir/build.make tf04_turtle_tracking/CMakeFiles/3.control_turtle2.dir/src/3.control_turtle2.cpp.i
+.PHONY : src/3.control_turtle2.cpp.i
+
+src/3.control_turtle2.s: src/3.control_turtle2.cpp.s
+
+.PHONY : src/3.control_turtle2.s
+
+# target to generate assembly for a file
+src/3.control_turtle2.cpp.s:
+	cd /datav/projects/ROS/common_component_demo/build && $(MAKE) -f tf04_turtle_tracking/CMakeFiles/3.control_turtle2.dir/build.make tf04_turtle_tracking/CMakeFiles/3.control_turtle2.dir/src/3.control_turtle2.cpp.s
+.PHONY : src/3.control_turtle2.cpp.s
 
 # Help Target
 help:
@@ -259,19 +301,23 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... pub_turtle_pose"
-	@echo "... draw_another_turtle"
-	@echo "... src/draw_another_turtle.o"
-	@echo "... src/draw_another_turtle.i"
-	@echo "... src/draw_another_turtle.s"
-	@echo "... src/pub_turtle_pose.o"
-	@echo "... src/pub_turtle_pose.i"
-	@echo "... src/pub_turtle_pose.s"
+	@echo "... 3.control_turtle2"
+	@echo "... 2.pub_turtle_pose"
+	@echo "... 1.draw_another_turtle"
+	@echo "... src/1.draw_another_turtle.o"
+	@echo "... src/1.draw_another_turtle.i"
+	@echo "... src/1.draw_another_turtle.s"
+	@echo "... src/2.pub_turtle_pose.o"
+	@echo "... src/2.pub_turtle_pose.i"
+	@echo "... src/2.pub_turtle_pose.s"
+	@echo "... src/3.control_turtle2.o"
+	@echo "... src/3.control_turtle2.i"
+	@echo "... src/3.control_turtle2.s"
 .PHONY : help
 
 

@@ -65,7 +65,7 @@ int main(int argc, char* argv[])
 
     // 3. 创建订阅对象，订阅 /turtle1/pose;
     //! 关键点： 订阅话题的名称， 可以动态传入参数，比如 turtle1 和turtle2 都可以
-    ros::Subscriber sub = nh.subscribe(turtle_name + "/pose", 100, doPose); // 注意斜杠
+    ros::Subscriber sub = nh.subscribe<turtlesim::Pose>(turtle_name + "/pose", 100, doPose); // 注意斜杠
     // 4. 回调函数处理订阅的消息：将位姿信息转换成坐标相对关系并发布（重点）
     // 5. 开始处理订阅到的信息
     ros::spin();

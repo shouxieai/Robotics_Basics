@@ -138,8 +138,9 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(draw_another_turtle src/draw_another_turtle.cpp)
-add_executable(pub_turtle_pose src/pub_turtle_pose.cpp)
+add_executable(1.draw_another_turtle src/1.draw_another_turtle.cpp)
+add_executable(2.pub_turtle_pose src/2.pub_turtle_pose.cpp)
+add_executable(3.control_turtle2 src/3.control_turtle2.cpp)
 
 
 ## Rename C++ executable without prefix
@@ -150,14 +151,18 @@ add_executable(pub_turtle_pose src/pub_turtle_pose.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-add_dependencies(draw_another_turtle ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(pub_turtle_pose ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(1.draw_another_turtle ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(2.pub_turtle_pose ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(3.control_turtle2 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(draw_another_turtle
+target_link_libraries(1.draw_another_turtle
    ${catkin_LIBRARIES}
 )
-target_link_libraries(pub_turtle_pose
+target_link_libraries(2.pub_turtle_pose
+   ${catkin_LIBRARIES}
+)
+target_link_libraries(3.control_turtle2
    ${catkin_LIBRARIES}
 )
 

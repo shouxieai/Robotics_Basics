@@ -6,7 +6,7 @@
     <!--2.生成从乌龟的节点-->
     <node pkg="tf04_turtle_tracking" type="draw_another_turtle" name="turtle2" output="screen" />
     
-    <!-- 3,需要启动两个乌龟相对与世界的坐标关系的发布-->
+    <!--3,需要启动两个乌龟相对与世界的坐标关系的发布-->
     <!--
         基本实现思路:
             1,节点只编写一个
@@ -15,5 +15,11 @@
     -->
     <node pkg="tf04_turtle_tracking" type="pub_turtle_pose" name="pub1" args="turtle1" output="screen" />
     <node pkg="tf04_turtle_tracking" type="pub_turtle_pose" name="pub2" args="turtle2" output="screen" />
+    
+    <!--4. 订阅turtle1(主)和turtle2（从）相对于世界坐标系的坐标消息，并转换成turtle1 相对于 turtle2 的坐标
+     TIPS：相对于谁，谁就看成是静止的，这里因为turtle2要追踪/打击turtle1，所以让turtle2静止，再去打击turtle1
+     只有你在我的坐标系下，我不需要动，我才好打击你 -->
+    <node pkg="tf04_turtle_tracking" type="control_turtle2" name="ctrl_turtle2" output="screen" />
+
 
 </launch>
