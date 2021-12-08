@@ -1,2 +1,2 @@
-tf01_static:tf02_dynamic
+tf01_static:tf02_dynamic:tf03_multi
 -DCATKIN_DEVEL_PREFIX=/datav/projects/ROS/common_component_demo/devel -DCMAKE_INSTALL_PREFIX=/datav/projects/ROS/common_component_demo/install -G Unix Makefiles

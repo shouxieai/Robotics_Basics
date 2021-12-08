@@ -47,7 +47,7 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=RelWithDebInfo
+CMAKE_BUILD_TYPE:STRING=
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -512,6 +512,12 @@ tf02_dynamic_BINARY_DIR:STATIC=/datav/projects/ROS/common_component_demo/build/t
 //Value Computed by CMake
 tf02_dynamic_SOURCE_DIR:STATIC=/datav/projects/ROS/common_component_demo/src/tf02_dynamic
 
+//Value Computed by CMake
+tf03_multi_BINARY_DIR:STATIC=/datav/projects/ROS/common_component_demo/build/tf03_multi
+
+//Value Computed by CMake
+tf03_multi_SOURCE_DIR:STATIC=/datav/projects/ROS/common_component_demo/src/tf03_multi
+
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/noetic/share/tf2/cmake
 
@@ -681,7 +687,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
