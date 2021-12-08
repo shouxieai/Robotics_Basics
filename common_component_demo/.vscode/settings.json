@@ -16,6 +16,8 @@
         "lu": "cpp",
         "qr": "cpp",
         "svd": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "optional": "cpp",
+        "variant": "cpp"
     }
 }

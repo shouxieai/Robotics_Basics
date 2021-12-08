@@ -818,6 +818,19 @@ turtlesim_generate_messages_lisp/fast:
 .PHONY : turtlesim_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named dyn_sub
+
+# Build rule for target.
+dyn_sub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dyn_sub
+.PHONY : dyn_sub
+
+# fast build rule for target.
+dyn_sub/fast:
+	$(MAKE) -f tf02_dynamic/CMakeFiles/dyn_sub.dir/build.make tf02_dynamic/CMakeFiles/dyn_sub.dir/build
+.PHONY : dyn_sub/fast
+
+#=============================================================================
 # Target rules for targets named turtlesim_generate_messages_nodejs
 
 # Build rule for target.
@@ -922,6 +935,19 @@ dyn_pub/fast:
 .PHONY : dyn_pub/fast
 
 #=============================================================================
+# Target rules for targets named pub_turtle_pose
+
+# Build rule for target.
+pub_turtle_pose: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pub_turtle_pose
+.PHONY : pub_turtle_pose
+
+# fast build rule for target.
+pub_turtle_pose/fast:
+	$(MAKE) -f tf04_turtle_tracking/CMakeFiles/pub_turtle_pose.dir/build.make tf04_turtle_tracking/CMakeFiles/pub_turtle_pose.dir/build
+.PHONY : pub_turtle_pose/fast
+
+#=============================================================================
 # Target rules for targets named draw_another_turtle
 
 # Build rule for target.
@@ -997,6 +1023,7 @@ help:
 	@echo "... turtlesim_generate_messages_cpp"
 	@echo "... turtlesim_generate_messages_eus"
 	@echo "... turtlesim_generate_messages_lisp"
+	@echo "... dyn_sub"
 	@echo "... turtlesim_generate_messages_nodejs"
 	@echo "... std_srvs_generate_messages_py"
 	@echo "... std_srvs_generate_messages_cpp"
@@ -1005,6 +1032,7 @@ help:
 	@echo "... turtlesim_generate_messages_py"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... dyn_pub"
+	@echo "... pub_turtle_pose"
 	@echo "... draw_another_turtle"
 .PHONY : help
 

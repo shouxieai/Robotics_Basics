@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
     while (ros::ok()){
         // 核心
         try{
-            //1. 计算son1和son2的相对关系
+            //1. 计算son1和son2的相对关系 (从静态坐标系pub已经拿到了world son1 son2 任意两个的变换关系)
             geometry_msgs::TransformStamped tfs = buffer.lookupTransform("son2","son1",ros::Time(0)); // target is fixed
             ROS_INFO("TRANSFORM:");
             ROS_INFO("base ID=%s",tfs.header.frame_id.c_str()); // 其他坐标系变到son2坐标系

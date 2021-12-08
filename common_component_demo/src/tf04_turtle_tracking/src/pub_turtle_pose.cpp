@@ -1,9 +1,16 @@
-
 #include "ros/ros.h"
 #include "turtlesim/Pose.h" //todo 为什么得导入这个 为了能够能够解析pose 信息体
 #include "tf2_ros/transform_broadcaster.h"  // 要发布坐标系的变换信息
 #include "geometry_msgs/TransformStamped.h" // 要表示坐标系变换信息
 #include "tf2/LinearMath/Quaternion.h"      // 四元数
+
+/* 
+the template is copied from /datav/projects/ROS/common_component_demo/src/tf02_dynamic/src/dyn_pub.cpp and modified
+to adapt to dynamic arguments.
+ */
+
+// 声明变量接收传递进来的参数
+std::string turtle_name;
 
 void doPose(const turtlesim::Pose::ConstPtr& pose){ //消息是这样的type turtlesim::Pose
     // pose是拿到的位姿信息，我们要转换成//todo, 并发布
@@ -13,8 +20,7 @@ void doPose(const turtlesim::Pose::ConstPtr& pose){ //消息是这样的type tur
     geometry_msgs::TransformStamped tfs; // 偏移旋转量的msg载体（aka 变换关系）
     tfs.header.frame_id       = "world";
     tfs.header.stamp          = ros::Time::now();
-    
-    tfs.child_frame_id        = "turtle1"; // 明确这次变换的主和从
+    tfs.child_frame_id        = turtle_name; // 明确这次变换的主和从
 
     // 坐标系偏移量的设置
     tfs.transform.translation.x = pose->x; // 乌龟pose的坐标已经是相对世界坐标系的了
@@ -35,8 +41,6 @@ void doPose(const turtlesim::Pose::ConstPtr& pose){ //消息是这样的type tur
 
     // 到此为止我们可以通过ts知道了此时此刻乌龟坐标和世界坐标系的变换关系
     // c. 发布
-    
-    
     pub.sendTransform(tfs);
 
 }
@@ -46,9 +50,22 @@ int main(int argc, char* argv[])
 {
     // 2. 初始化、NodeHandle;
     ros::init(argc, argv, "dynamic_pub");
-    ros::NodeHandle nh; // 订阅一定要有, 但这里是发布，不一定需要
+    ros::NodeHandle nh; // 订阅一定要有
+
+    /* 
+        解析 launch 文件通过args 传入的参数
+     */
+    
+    if (argc !=2){
+        ROS_ERROR("plz input an arg");
+        return 1;
+    } else{
+        turtle_name = argv[1]; // 1st arg: name="pub1"   2nd arg: args="turtle1"
+    }
+
     // 3. 创建订阅对象，订阅 /turtle1/pose;
-    ros::Subscriber sub = nh.subscribe<turtlesim::Pose>("/turtle1/pose", 100, doPose);
+    //! 关键点： 订阅话题的名称， 可以动态传入参数，比如 turtle1 和turtle2 都可以
+    ros::Subscriber sub = nh.subscribe(turtle_name + "/pose", 100, doPose); // 注意斜杠
     // 4. 回调函数处理订阅的消息：将位姿信息转换成坐标相对关系并发布（重点）
     // 5. 开始处理订阅到的信息
     ros::spin();

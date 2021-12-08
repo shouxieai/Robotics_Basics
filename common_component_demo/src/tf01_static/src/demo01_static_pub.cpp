@@ -9,6 +9,29 @@
 /* 
     静态坐标变换发布方:
         发布关于 laser 坐标系的位置信息 
+            e.g. 信息形式
+        
+                transforms: 
+                - 
+                    header: 
+                    seq: 0
+                    stamp: 
+                        secs: 1638949753
+                        nsecs: 815968918
+                    frame_id: "base_link"
+                    child_frame_id: "laser"
+                    transform: 
+                    translation: 
+                        x: 0.2
+                        y: 0.0
+                        z: 0.5
+                    rotation: 
+                        x: 0.0
+                        y: 0.0
+                        z: 0.0
+                        w: 1.0
+                ---
+
 
     实现流程:
         1.包含头文件
