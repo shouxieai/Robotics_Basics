@@ -1,2 +1,0 @@
-
--DCATKIN_DEVEL_PREFIX=/datav/projects/ROS/demo4_service_communication/devel -DCMAKE_INSTALL_PREFIX=/datav/projects/ROS/demo4_service_communication/install -G Unix Makefiles

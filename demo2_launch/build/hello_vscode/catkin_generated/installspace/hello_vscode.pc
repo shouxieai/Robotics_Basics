@@ -1,8 +1,0 @@
-prefix=/datav/projects/ROS/demo2_launch/install
-
-Name: hello_vscode
-Description: Description of hello_vscode
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
