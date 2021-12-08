@@ -5,6 +5,7 @@
 #include "tf2_geometry_msgs/tf2_geometry_msgs.h"
 
 /* 
+  ref: http://www.autolabor.com.cn/book/ROSTutorials/di-5-zhang-ji-qi-ren-dao-hang/51-tfzuo-biao-bian-huan/514-duo-zuo-biao-bian-huan.html
   订阅方实现: 1,计算son1与son2的相对关系 
              2,计算son1的中某个坐标点在son2中的坐标值
     
@@ -14,7 +15,6 @@
     3,创建订阅对象;
     4,编写解析逻辑;
     5.spinOnce():
-
 
 
  */

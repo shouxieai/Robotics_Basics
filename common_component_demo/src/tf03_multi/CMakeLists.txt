@@ -146,7 +146,7 @@ add_executable(multi_frames_sub src/multi_frames_sub.cpp)
 # set_target_properties(${PROJECT_NAME}_node PROPERTIES OUTPUT_NAME node PREFIX "")
 
 ## Add cmake target dependencies of the executable
-## same as for the library above
+## same as for the library above #todo why some need to add_dependencies? other doesn't
 add_dependencies(multi_frames_sub ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
