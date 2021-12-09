@@ -1,0 +1,2 @@
+basic_launch:custom_head:custom_src:meta_pkg:param_server:pub_sub:srv_cli
+-DCATKIN_DEVEL_PREFIX=/datav/projects/ROS/demo/devel -DCMAKE_INSTALL_PREFIX=/datav/projects/ROS/demo/install -G Unix Makefiles

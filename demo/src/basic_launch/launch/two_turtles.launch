@@ -1,0 +1,17 @@
+<launch>
+    <!--two turtles in two groups-->
+    <group ns="first">
+        <node pkg="turtlesim" type="turtlesim_node" name="my_turtle" output="screen" />
+        <node pkg="turtlesim" type="turtlesim_teleop" name="my_key" output="screen"  />
+    </group>
+    <group ns="second">
+        <node pkg="turtlesim" type="turtlesim_node" name="my_turtle" output="screen" />
+        <node pkg="turtlesim" type="turtlesim_teleop" name="my_key" output="screen" />
+    </group>
+</launch>
+
+<!-- 
+they have the same pkg, type and name. But they are in two groups.
+ -->
+
+

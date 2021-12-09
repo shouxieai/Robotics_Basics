@@ -1,0 +1,8 @@
+prefix=/datav/projects/ROS/demo/install
+
+Name: custom_head
+Description: Description of custom_head
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
