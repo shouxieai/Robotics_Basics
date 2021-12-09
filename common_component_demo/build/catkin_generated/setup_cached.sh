@@ -5,12 +5,12 @@
 # it emulates the modifications of the setup script without recurring computations
 
 # new environment variables
-export ROSLISP_PACKAGE_DIRECTORIES='/datav/projects/ROS/common_component_demo/devel/share/common-lisp'
+export ROSLISP_PACKAGE_DIRECTORIES='/datav/projects/Robotics_Basics/common_component_demo/devel/share/common-lisp'
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/datav/projects/ROS/common_component_demo/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/datav/projects/ROS/common_component_demo/devel/lib:$LD_LIBRARY_PATH"
+export CMAKE_PREFIX_PATH="/datav/projects/Robotics_Basics/common_component_demo/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/datav/projects/Robotics_Basics/common_component_demo/devel/lib:$LD_LIBRARY_PATH"
 export PATH='/opt/ros/noetic/bin:/root/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/bin:/datav/software/anaconda3/bin:/datav/software/anaconda3/condabin:/root/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
-export PKG_CONFIG_PATH="/datav/projects/ROS/common_component_demo/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
-export PWD='/datav/projects/ROS/common_component_demo/build'
-export ROS_PACKAGE_PATH="/datav/projects/ROS/common_component_demo/src:$ROS_PACKAGE_PATH"
+export PKG_CONFIG_PATH="/datav/projects/Robotics_Basics/common_component_demo/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PWD='/datav/projects/Robotics_Basics/common_component_demo/build'
+export ROS_PACKAGE_PATH="/datav/projects/Robotics_Basics/common_component_demo/src:$ROS_PACKAGE_PATH"

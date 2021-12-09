@@ -19,9 +19,9 @@ except ImportError:
             break
     from catkin.environment_cache import generate_environment_script
 
-code = generate_environment_script('/datav/projects/ROS/common_component_demo/devel/env.sh')
+code = generate_environment_script('/datav/projects/Robotics_Basics/common_component_demo/devel/env.sh')
 
-output_filename = '/datav/projects/ROS/common_component_demo/build/catkin_generated/setup_cached.sh'
+output_filename = '/datav/projects/Robotics_Basics/common_component_demo/build/catkin_generated/setup_cached.sh'
 with open(output_filename, 'w') as f:
     # print('Generate script for cached setup "%s"' % output_filename)
     f.write('\n'.join(code))

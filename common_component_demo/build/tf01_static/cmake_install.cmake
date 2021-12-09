@@ -1,8 +1,8 @@
-# Install script for directory: /datav/projects/ROS/common_component_demo/src/tf01_static
+# Install script for directory: /datav/projects/Robotics_Basics/common_component_demo/src/tf01_static
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/datav/projects/ROS/common_component_demo/install")
+  set(CMAKE_INSTALL_PREFIX "/datav/projects/Robotics_Basics/common_component_demo/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/datav/projects/ROS/common_component_demo/build/tf01_static/catkin_generated/installspace/tf01_static.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/datav/projects/Robotics_Basics/common_component_demo/build/tf01_static/catkin_generated/installspace/tf01_static.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tf01_static/cmake" TYPE FILE FILES
-    "/datav/projects/ROS/common_component_demo/build/tf01_static/catkin_generated/installspace/tf01_staticConfig.cmake"
-    "/datav/projects/ROS/common_component_demo/build/tf01_static/catkin_generated/installspace/tf01_staticConfig-version.cmake"
+    "/datav/projects/Robotics_Basics/common_component_demo/build/tf01_static/catkin_generated/installspace/tf01_staticConfig.cmake"
+    "/datav/projects/Robotics_Basics/common_component_demo/build/tf01_static/catkin_generated/installspace/tf01_staticConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tf01_static" TYPE FILE FILES "/datav/projects/ROS/common_component_demo/src/tf01_static/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tf01_static" TYPE FILE FILES "/datav/projects/Robotics_Basics/common_component_demo/src/tf01_static/package.xml")
 endif()
 

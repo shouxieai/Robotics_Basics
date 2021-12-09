@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /datav/projects/ROS/common_component_demo/build/CMakeFiles/CMakeTmp
+Change Dir: /datav/projects/Robotics_Basics/common_component_demo/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_e756c/fast && /usr/bin/make -f CMakeFiles/cmTC_e756c.dir/build.make CMakeFiles/cmTC_e756c.dir/build
-make[1]: Entering directory '/datav/projects/ROS/common_component_demo/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e756c.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_e756c.dir/src.c.o   -c /datav/projects/ROS/common_component_demo/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_e756c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e756c.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_e756c.dir/src.c.o  -o cmTC_e756c 
-/usr/bin/ld: CMakeFiles/cmTC_e756c.dir/src.c.o: in function `main':
+Run Build Command(s):/usr/bin/make cmTC_59cb1/fast && /usr/bin/make -f CMakeFiles/cmTC_59cb1.dir/build.make CMakeFiles/cmTC_59cb1.dir/build
+make[1]: Entering directory '/datav/projects/Robotics_Basics/common_component_demo/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_59cb1.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_59cb1.dir/src.c.o   -c /datav/projects/Robotics_Basics/common_component_demo/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_59cb1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59cb1.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_59cb1.dir/src.c.o  -o cmTC_59cb1 
+/usr/bin/ld: CMakeFiles/cmTC_59cb1.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_e756c.dir/build.make:87: cmTC_e756c] Error 1
-make[1]: Leaving directory '/datav/projects/ROS/common_component_demo/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_e756c/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_59cb1.dir/build.make:87: cmTC_59cb1] Error 1
+make[1]: Leaving directory '/datav/projects/Robotics_Basics/common_component_demo/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_59cb1/fast] Error 2
 
 
 Source file was:
@@ -39,20 +39,20 @@ int main(void)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /datav/projects/ROS/common_component_demo/build/CMakeFiles/CMakeTmp
+Change Dir: /datav/projects/Robotics_Basics/common_component_demo/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_d858b/fast && /usr/bin/make -f CMakeFiles/cmTC_d858b.dir/build.make CMakeFiles/cmTC_d858b.dir/build
-make[1]: Entering directory '/datav/projects/ROS/common_component_demo/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d858b.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d858b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_d858b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d858b.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_d858b.dir/CheckFunctionExists.c.o  -o cmTC_d858b  -lpthreads 
+Run Build Command(s):/usr/bin/make cmTC_79421/fast && /usr/bin/make -f CMakeFiles/cmTC_79421.dir/build.make CMakeFiles/cmTC_79421.dir/build
+make[1]: Entering directory '/datav/projects/Robotics_Basics/common_component_demo/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_79421.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_79421.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_79421
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79421.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_79421.dir/CheckFunctionExists.c.o  -o cmTC_79421  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_d858b.dir/build.make:87: cmTC_d858b] Error 1
-make[1]: Leaving directory '/datav/projects/ROS/common_component_demo/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_d858b/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_79421.dir/build.make:87: cmTC_79421] Error 1
+make[1]: Leaving directory '/datav/projects/Robotics_Basics/common_component_demo/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_79421/fast] Error 2
 
 
 

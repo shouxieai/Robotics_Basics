@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/datav/projects/ROS/common_component_demo/devel/lib/tf02_dynamic/dyn_pub"
-  "/datav/projects/ROS/common_component_demo/devel/lib/tf02_dynamic/dyn_pub.pdb"
+  "/datav/projects/Robotics_Basics/common_component_demo/devel/lib/tf02_dynamic/dyn_pub"
+  "/datav/projects/Robotics_Basics/common_component_demo/devel/lib/tf02_dynamic/dyn_pub.pdb"
   "CMakeFiles/dyn_pub.dir/src/dyn_pub.cpp.o"
 )
 

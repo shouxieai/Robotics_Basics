@@ -1,4 +1,4 @@
-prefix=/datav/projects/ROS/common_component_demo/devel
+prefix=/datav/projects/Robotics_Basics/common_component_demo/devel
 
 Name: tf02_dynamic
 Description: Description of tf02_dynamic

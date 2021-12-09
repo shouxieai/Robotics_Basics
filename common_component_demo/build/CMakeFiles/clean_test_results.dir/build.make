@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /datav/projects/ROS/common_component_demo/src
+CMAKE_SOURCE_DIR = /datav/projects/Robotics_Basics/common_component_demo/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /datav/projects/ROS/common_component_demo/build
+CMAKE_BINARY_DIR = /datav/projects/Robotics_Basics/common_component_demo/build
 
 # Utility rule file for clean_test_results.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /datav/projects/ROS/common_component_demo/build
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/datav/software/anaconda3/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /datav/projects/ROS/common_component_demo/build/test_results
+	/datav/software/anaconda3/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /datav/projects/Robotics_Basics/common_component_demo/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /datav/projects/ROS/common_component_demo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /datav/projects/ROS/common_component_demo/src /datav/projects/ROS/common_component_demo/src /datav/projects/ROS/common_component_demo/build /datav/projects/ROS/common_component_demo/build /datav/projects/ROS/common_component_demo/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /datav/projects/Robotics_Basics/common_component_demo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /datav/projects/Robotics_Basics/common_component_demo/src /datav/projects/Robotics_Basics/common_component_demo/src /datav/projects/Robotics_Basics/common_component_demo/build /datav/projects/Robotics_Basics/common_component_demo/build /datav/projects/Robotics_Basics/common_component_demo/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

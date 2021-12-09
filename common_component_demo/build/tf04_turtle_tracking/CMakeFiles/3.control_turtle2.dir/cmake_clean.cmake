@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/datav/projects/ROS/common_component_demo/devel/lib/tf04_turtle_tracking/3.control_turtle2"
-  "/datav/projects/ROS/common_component_demo/devel/lib/tf04_turtle_tracking/3.control_turtle2.pdb"
+  "/datav/projects/Robotics_Basics/common_component_demo/devel/lib/tf04_turtle_tracking/3.control_turtle2"
+  "/datav/projects/Robotics_Basics/common_component_demo/devel/lib/tf04_turtle_tracking/3.control_turtle2.pdb"
   "CMakeFiles/3.control_turtle2.dir/src/3.control_turtle2.cpp.o"
 )
 

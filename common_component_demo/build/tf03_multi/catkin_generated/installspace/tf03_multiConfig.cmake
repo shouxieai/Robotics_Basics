@@ -67,14 +67,14 @@ set(tf03_multi_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(tf03_multi_SOURCE_PREFIX /datav/projects/ROS/common_component_demo/src/tf03_multi)
-  set(tf03_multi_DEVEL_PREFIX /datav/projects/ROS/common_component_demo/devel)
+  set(tf03_multi_SOURCE_PREFIX /datav/projects/Robotics_Basics/common_component_demo/src/tf03_multi)
+  set(tf03_multi_DEVEL_PREFIX /datav/projects/Robotics_Basics/common_component_demo/devel)
   set(tf03_multi_INSTALL_PREFIX "")
   set(tf03_multi_PREFIX ${tf03_multi_DEVEL_PREFIX})
 else()
   set(tf03_multi_SOURCE_PREFIX "")
   set(tf03_multi_DEVEL_PREFIX "")
-  set(tf03_multi_INSTALL_PREFIX /datav/projects/ROS/common_component_demo/install)
+  set(tf03_multi_INSTALL_PREFIX /datav/projects/Robotics_Basics/common_component_demo/install)
   set(tf03_multi_PREFIX ${tf03_multi_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /datav/projects/ROS/common_component_demo/install/lib;/opt/ros/noetic/lib)
+    foreach(path /datav/projects/Robotics_Basics/common_component_demo/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

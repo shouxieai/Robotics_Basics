@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "tf02_dynamic"
-PROJECT_SPACE_DIR = "/datav/projects/ROS/common_component_demo/devel"
+PROJECT_SPACE_DIR = "/datav/projects/Robotics_Basics/common_component_demo/devel"
 PROJECT_VERSION = "0.0.0"

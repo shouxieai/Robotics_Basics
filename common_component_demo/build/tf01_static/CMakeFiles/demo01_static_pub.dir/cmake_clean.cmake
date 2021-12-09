@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/datav/projects/ROS/common_component_demo/devel/lib/tf01_static/demo01_static_pub"
-  "/datav/projects/ROS/common_component_demo/devel/lib/tf01_static/demo01_static_pub.pdb"
+  "/datav/projects/Robotics_Basics/common_component_demo/devel/lib/tf01_static/demo01_static_pub"
+  "/datav/projects/Robotics_Basics/common_component_demo/devel/lib/tf01_static/demo01_static_pub.pdb"
   "CMakeFiles/demo01_static_pub.dir/src/demo01_static_pub.cpp.o"
 )
 

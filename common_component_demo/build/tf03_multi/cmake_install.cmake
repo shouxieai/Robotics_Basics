@@ -1,8 +1,8 @@
-# Install script for directory: /datav/projects/ROS/common_component_demo/src/tf03_multi
+# Install script for directory: /datav/projects/Robotics_Basics/common_component_demo/src/tf03_multi
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/datav/projects/ROS/common_component_demo/install")
+  set(CMAKE_INSTALL_PREFIX "/datav/projects/Robotics_Basics/common_component_demo/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/datav/projects/ROS/common_component_demo/build/tf03_multi/catkin_generated/installspace/tf03_multi.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/datav/projects/Robotics_Basics/common_component_demo/build/tf03_multi/catkin_generated/installspace/tf03_multi.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tf03_multi/cmake" TYPE FILE FILES
-    "/datav/projects/ROS/common_component_demo/build/tf03_multi/catkin_generated/installspace/tf03_multiConfig.cmake"
-    "/datav/projects/ROS/common_component_demo/build/tf03_multi/catkin_generated/installspace/tf03_multiConfig-version.cmake"
+    "/datav/projects/Robotics_Basics/common_component_demo/build/tf03_multi/catkin_generated/installspace/tf03_multiConfig.cmake"
+    "/datav/projects/Robotics_Basics/common_component_demo/build/tf03_multi/catkin_generated/installspace/tf03_multiConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tf03_multi" TYPE FILE FILES "/datav/projects/ROS/common_component_demo/src/tf03_multi/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tf03_multi" TYPE FILE FILES "/datav/projects/Robotics_Basics/common_component_demo/src/tf03_multi/package.xml")
 endif()
 

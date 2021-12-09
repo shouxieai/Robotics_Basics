@@ -1,8 +1,8 @@
-# Install script for directory: /datav/projects/ROS/common_component_demo/src/tf02_dynamic
+# Install script for directory: /datav/projects/Robotics_Basics/common_component_demo/src/tf02_dynamic
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/datav/projects/ROS/common_component_demo/install")
+  set(CMAKE_INSTALL_PREFIX "/datav/projects/Robotics_Basics/common_component_demo/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/datav/projects/ROS/common_component_demo/build/tf02_dynamic/catkin_generated/installspace/tf02_dynamic.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/datav/projects/Robotics_Basics/common_component_demo/build/tf02_dynamic/catkin_generated/installspace/tf02_dynamic.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tf02_dynamic/cmake" TYPE FILE FILES
-    "/datav/projects/ROS/common_component_demo/build/tf02_dynamic/catkin_generated/installspace/tf02_dynamicConfig.cmake"
-    "/datav/projects/ROS/common_component_demo/build/tf02_dynamic/catkin_generated/installspace/tf02_dynamicConfig-version.cmake"
+    "/datav/projects/Robotics_Basics/common_component_demo/build/tf02_dynamic/catkin_generated/installspace/tf02_dynamicConfig.cmake"
+    "/datav/projects/Robotics_Basics/common_component_demo/build/tf02_dynamic/catkin_generated/installspace/tf02_dynamicConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tf02_dynamic" TYPE FILE FILES "/datav/projects/ROS/common_component_demo/src/tf02_dynamic/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tf02_dynamic" TYPE FILE FILES "/datav/projects/Robotics_Basics/common_component_demo/src/tf02_dynamic/package.xml")
 endif()
 
