@@ -1,0 +1,8 @@
+prefix=/datav/projects/ROS/common_component_demo/install
+
+Name: tf03_multi
+Description: Description of tf03_multi
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
